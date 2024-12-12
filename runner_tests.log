@@ -1,2 +1,12 @@
-2024-12-12 16:27:17,911 | WARNING | Неверная скорость для Runner
-2024-12-12 16:27:17,911 | WARNING | Неверный тип данных для объекта Runner
+2024-12-12 16:33:12,432 | WARNING | Неверная скорость для Runner
+Traceback (most recent call last):
+  File "C:\Users\user\PycharmProjects\pythonProject\12\tests_12_3.py", line 15, in test_walk
+    self.assertEqual(runner.distance, 50)
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'Runner' object has no attribute 'assertEqual'
+2024-12-12 16:33:12,433 | WARNING | Неверный тип данных для объекта Runner
+Traceback (most recent call last):
+  File "C:\Users\user\PycharmProjects\pythonProject\12\tests_12_3.py", line 27, in test_run
+    self.assertEqual(runner.distance, 100)
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'Runner' object has no attribute 'assertEqual'
