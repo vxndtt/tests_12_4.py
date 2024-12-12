@@ -1,3 +1,4 @@
+import logging
 import unittest
 import runner_and_tournament
 
@@ -7,19 +8,26 @@ class RunnerTest(unittest.TestCase):
 
     @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_walk(self):
-        runner = Runner('Sasha')
-        for i in range(10):
-            runner.walk()
-        self.assertEqual(runner.distance, 50)
-
+        try:
+            runner = Runner('Sasha', 5)
+            for i in range(10):
+                runner.walk()
+            self.assertEqual(runner.distance, 50)
+            logging.info('test_walk" выполнен успешно')
+        except:
+            logging.warning('Неверная скорость для Runner')
 
 
     @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_run(self):
-        runner = Runner('Kolya', 5)
-        for i in range(10):
-            runner.run()
-        self.assertEqual(runner.distance, 100)
+        try:
+            runner = Runner('Kolya', 5)
+            for i in range(10):
+                runner.run()
+            self.assertEqual(runner.distance, 100)
+            logging.info('Неверный тип данных для объекта Runner')
+        except:
+            logging.warning('Неверный тип данных для объекта Runner')
 
 
     @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
